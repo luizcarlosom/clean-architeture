@@ -31,7 +31,7 @@ def test_register_first_name_error():
     with pytest.raises(Exception) as exc_info:
         user_register.register(first_name, last_name, age)
     
-    assert str(exc_info.value) == "Nome invalido para a busca"
+    assert str(exc_info.value) == "Nome invalido para o cadastro"
 
 def test_register_first_name_error_in_long_name():
     first_name = 'meuNomeEhLuizCarlosOliveiraMaciel'
@@ -44,4 +44,4 @@ def test_register_first_name_error_in_long_name():
     with pytest.raises(Exception) as exc_info:
         user_register.register(first_name, last_name, age)
     
-    assert str(exc_info.value) == "Nome muito grande para busca"
+    assert str(exc_info.value) == "Nome muito grande para o cadastro"
